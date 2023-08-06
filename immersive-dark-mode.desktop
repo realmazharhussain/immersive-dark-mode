@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Immersive Dark Mode
+Exec=immersive-dark-mode
+NoDisplay=true
