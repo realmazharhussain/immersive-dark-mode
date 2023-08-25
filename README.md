@@ -19,7 +19,6 @@ Changes gtk3/legacy applications, icon and cursor theme when dark mode is enable
 After installation, the tool will run automotically on the next boot. To run it without
 having to reboot, just open a terminal and run the command `immersive-dark-mode & disown`.
 
-
 ## Customize
 
 By default, Adwaita is used as the GTK3 theme and Breeze as the cursor theme. To change
