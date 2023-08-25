@@ -4,11 +4,11 @@ def re_set_theme(*args):
     if settings['color-scheme'] != 'prefer-dark':
         settings['gtk-theme'] = 'Adwaita'
         #settings['icon-theme'] = 'Adwaita'
-        #settings['cursor-theme'] = 'Breeze_Snow'
+        #settings['cursor-theme'] = 'Adwaita'
     else:
         settings['gtk-theme'] = 'Adwaita-dark'
         #settings['icon-theme'] = 'Adwaita'
-        #settings['cursor-theme'] = 'Breeze'
+        #settings['cursor-theme'] = 'Adwaita'
 
 
 import sys
