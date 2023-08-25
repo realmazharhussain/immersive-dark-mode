@@ -1,12 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-from gi.repository import GLib, Gio
-
-
-loop = GLib.MainLoop()
-settings = Gio.Settings.new('org.gnome.desktop.interface')
-
 def re_set_theme(*args):
     if settings['color-scheme'] == 'prefer-dark':
         settings['gtk-theme'] = 'Adwaita-dark'
@@ -15,6 +8,12 @@ def re_set_theme(*args):
         settings['gtk-theme'] = 'Adwaita'
         settings['cursor-theme'] = 'Breeze_Snow'
 
+
+import sys
+from gi.repository import GLib, Gio
+
+loop = GLib.MainLoop()
+settings = Gio.Settings.new('org.gnome.desktop.interface')
 settings.connect('changed::color-scheme', re_set_theme)
 re_set_theme()
 
