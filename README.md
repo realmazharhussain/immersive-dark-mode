@@ -7,12 +7,12 @@ Changes gtk3/legacy applications, icon and cursor theme when dark mode is enable
 ### System-wide
 
 1. Copy `immersive-dark-mode` to `/usr/bin/`
-1. Copy `immersive-dark-mode.desktop` to `/etc/xdg/autostart/`
+2. Copy `immersive-dark-mode.desktop` to `/etc/xdg/autostart/`
 
 ### For Single User
 
 1. Copy `immersive-dark-mode` to `$HOME/.local/usr/bin/`
-1. Copy `immersive-dark-mode.desktop` to `$HOME/.config/autostart/`
+2. Copy `immersive-dark-mode.desktop` to `$HOME/.config/autostart/`
 
 ## Run/Execute
 
