@@ -41,7 +41,7 @@ For example, to change cursor theme to 'Breeze' (dark) and 'Breeze\_Snow' (light
 `immersive-dark-mode` file as follows
 
 ```diff
-def re_set_theme(*args):
+ def re_set_theme(*args):
      if settings['color-scheme'] != 'prefer-dark':
          settings['gtk-theme'] = 'Adwaita'
          #settings['icon-theme'] = 'Adwaita'
