@@ -1,6 +1,6 @@
 # Immersive Dark Mode (for GNOME only)
 
-Changes gtk3/legacy applications and cursor theme when dark mode is enabled/disabled.
+Changes gtk3/legacy applications, icon and cursor theme when dark mode is enabled/disabled.
 
 ## Install
 
