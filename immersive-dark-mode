@@ -12,12 +12,11 @@ def re_set_theme(*args):
 import sys
 from gi.repository import GLib, Gio
 
-loop = GLib.MainLoop()
 settings = Gio.Settings.new('org.gnome.desktop.interface')
 settings.connect('changed::color-scheme', re_set_theme)
 re_set_theme()
 
 try:
-    loop.run()
+    GLib.MainLoop().run()
 except KeyboardInterrupt:
     pass
