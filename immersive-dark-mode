@@ -11,9 +11,7 @@ def re_set_theme(*args):
         #settings['cursor-theme'] = 'Adwaita'
 
 
-import sys
 from gi.repository import GLib, Gio
-
 settings = Gio.Settings.new('org.gnome.desktop.interface')
 settings.connect('changed::color-scheme', re_set_theme)
 re_set_theme()
