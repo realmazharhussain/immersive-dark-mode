@@ -43,13 +43,19 @@ For example, to change cursor theme to 'Breeze' (dark) and 'Breeze\_Snow' (light
 ```diff
  def re_set_theme(*args):
      if settings['color-scheme'] != 'prefer-dark':
-         settings['gtk-theme'] = 'Adwaita'
-         #settings['icon-theme'] = 'Adwaita'
 -        #settings['cursor-theme'] = 'Adwaita'
 +        settings['cursor-theme'] = 'Breeze_Snow'
-     else:
-         settings['gtk-theme'] = 'Adwaita-dark'
          #settings['icon-theme'] = 'Adwaita'
+         settings['gtk-theme'] = 'Adwaita'       # GTK3 Theme
+         #gtk_css.unlink(missing_ok=True)        # GTK4 Theme Support
+         #gtk_css.symlink_to(light_css)          # GTK4 Theme Support
+
+     else:
 -        #settings['cursor-theme'] = 'Adwaita'
 +        settings['cursor-theme'] = 'Breeze'
+         #settings['icon-theme'] = 'Adwaita'
+         settings['gtk-theme'] = 'Adwaita-dark'  # GTK3 Theme
+         #gtk_css.unlink(missing_ok=True)        # GTK4 Theme Support
+         #gtk_css.symlink_to(dark_css)           # GTK4 Theme Support
+
 ```
