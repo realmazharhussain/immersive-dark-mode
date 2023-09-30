@@ -2,13 +2,13 @@
 
 def re_set_theme(*args):
     if settings['color-scheme'] != 'prefer-dark':
-        settings['gtk-theme'] = 'Adwaita'       # GTK3 Theme
+        #settings['gtk-theme'] = 'Adwaita'       # GTK3 Theme
         #settings['icon-theme'] = 'Adwaita'
         #settings['cursor-theme'] = 'Adwaita'
         #gtk_css.unlink(missing_ok=True)         # GTK4 Theme Support
         #gtk_css.symlink_to(light_css)           # GTK4 Theme Support
     else:
-        settings['gtk-theme'] = 'Adwaita-dark'  # GTK3 Theme
+        #settings['gtk-theme'] = 'Adwaita-dark'  # GTK3 Theme
         #settings['icon-theme'] = 'Adwaita'
         #settings['cursor-theme'] = 'Adwaita'
         #gtk_css.unlink(missing_ok=True)         # GTK4 Theme Support
