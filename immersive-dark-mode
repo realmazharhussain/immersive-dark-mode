@@ -2,16 +2,27 @@
 
 def re_set_theme(*args):
     if settings['color-scheme'] != 'prefer-dark':
-        settings['gtk-theme'] = 'Adwaita'
+        settings['gtk-theme'] = 'Adwaita'       # GTK3 Theme
         #settings['icon-theme'] = 'Adwaita'
         #settings['cursor-theme'] = 'Adwaita'
+        #gtk_css.unlink(missing_ok=True)         # GTK4 Theme Support
+        #gtk_css.symlink_to(light_css)           # GTK4 Theme Support
     else:
-        settings['gtk-theme'] = 'Adwaita-dark'
+        settings['gtk-theme'] = 'Adwaita-dark'  # GTK3 Theme
         #settings['icon-theme'] = 'Adwaita'
         #settings['cursor-theme'] = 'Adwaita'
+        #gtk_css.unlink(missing_ok=True)         # GTK4 Theme Support
+        #gtk_css.symlink_to(dark_css)            # GTK4 Theme Support
 
 
+from pathlib import Path
 from gi.repository import GLib, Gio
+
+config_dir = Path(GLib.get_user_config_dir())
+gtk_css = config_dir / 'gtk-4.0/gtk.css'
+dark_css = config_dir / 'gtk-4.0/gtk-dark.css'
+light_css = config_dir / 'gtk-4.0/gtk-light.css'
+
 settings = Gio.Settings.new('org.gnome.desktop.interface')
 settings.connect('changed::color-scheme', re_set_theme)
 re_set_theme()
